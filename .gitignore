@@ -159,6 +159,4 @@ Desktop.ini
 #########################
 
 .mailmap
-/apps*/
-*/bin/data/log.txt
-of2030-osx/scripts/*
+bin/data/log.txt

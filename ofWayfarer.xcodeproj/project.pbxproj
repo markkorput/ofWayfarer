@@ -48,6 +48,7 @@
 		4DCD170E1E293E350090591E /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		4DCD170F1E293E350090591E /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		4DF7D19D1E295B9D00A613C0 /* ofTestApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofTestApp.h; path = test/ofTestApp.h; sourceTree = "<group>"; };
+		4DF7D1A01E295E5800A613C0 /* singleton_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleton_macros.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* ofWayfarerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ofWayfarerDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
@@ -137,6 +138,7 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				4DCD170E1E293E350090591E /* ofApp.cpp */,
 				4DCD170F1E293E350090591E /* ofApp.h */,
+				4DF7D1A01E295E5800A613C0 /* singleton_macros.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
