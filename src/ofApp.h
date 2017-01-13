@@ -26,4 +26,5 @@ class ofApp : public ofBaseApp{
 
     private:
         Globe globe;
+        ofEasyCam cam;
 };

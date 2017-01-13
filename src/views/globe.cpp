@@ -12,6 +12,7 @@ void Globe::update(float dt){
 void Globe::draw(){
     glPushMatrix();
         ofSetColor(255, 255, 255, 255);
-        model.drawFaces();
+        // model.drawFaces();
+        model.drawWireframe();
     glPopMatrix();
 }
