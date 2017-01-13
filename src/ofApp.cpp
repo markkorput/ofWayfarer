@@ -4,16 +4,16 @@
 void ofApp::setup(){
     ofLog() << "Redirect logging to log.txt";
     ofLogToFile("log.txt", true);
+    globe.setup();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    globe.draw();
 }
 
 //--------------------------------------------------------------
