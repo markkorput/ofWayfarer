@@ -1,2 +1,3 @@
 ofxUnitTests
 ofxAssimpModelLoader
+ofxGui

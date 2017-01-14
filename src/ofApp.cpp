@@ -1,10 +1,14 @@
 #include "ofApp.h"
 
+#include "demos/globe_demo.hpp"
+
+using namespace wayfarer;
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofLog() << "Redirect logging to log.txt";
     ofLogToFile("log.txt", true);
-    globe.setup();
+    demos::GlobeDemo::singleton()->setup();
 }
 
 //--------------------------------------------------------------
@@ -13,9 +17,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    cam.begin();
-        globe.draw();
-    cam.end();
+    demos::GlobeDemo::singleton()->draw();
 }
 
 //--------------------------------------------------------------
