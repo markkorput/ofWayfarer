@@ -9,7 +9,9 @@ namespace wayfarer { namespace views {
 
     public: // common interface methods
 
-        Globe() : renderMode(OF_MESH_WIREFRAME), modelFileName("globe.obj"){}
+        Globe() : renderMode(OF_MESH_WIREFRAME),
+                modelFileName("globe.obj"),
+        color(ofColor::white){}
         void setup();
         void update(float dt);
         void draw();
@@ -22,11 +24,15 @@ namespace wayfarer { namespace views {
         string getModelFileName(){ return modelFileName; }
         void setModelFileName(string newModelFileName, bool reload=true){ modelFileName = newModelFileName; setup(); }
 
+        ofColor getColor(){ return color; }
+        void setColor(const ofColor &clr){ color = clr; }
+
     private: // attributes
 
         ofxAssimpModelLoader model;
         ofPolyRenderMode renderMode;
         string modelFileName;
+        ofColor color;
     };
 
 } }

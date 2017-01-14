@@ -3,15 +3,17 @@
 using namespace wayfarer::views;
 
 void Globe::setup(){
-    model.loadModel(modelFileName);
+    ofLog() << "Globe::setup loading model form file: " << modelFileName;
+    ofLog() << (model.loadModel(modelFileName) ? "done." : "failed.");
 }
 
 void Globe::update(float dt){
 }
 
 void Globe::draw(){
-    glPushMatrix();
-        ofSetColor(255, 255, 255, 255);
+    ofSetColor(color);
+
+    glPushMatrix();    
         // model.drawFaces();
         model.draw(renderMode);
     glPopMatrix();
