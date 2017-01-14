@@ -10,11 +10,16 @@ namespace wayfarer { namespace views {
     public: // common interface methods
 
         Globe() : renderMode(OF_MESH_WIREFRAME),
-                modelFileName("globe.obj"),
-        color(ofColor::white){}
+                modelFileName("sphere.fbx"),
+                continentsModelFileName("continents.fbx"),
+                color(ofColor::white){}
         void setup();
-        void update(float dt);
+        void update();
         void draw();
+    
+    public: // operations methods
+        
+        void playAnims(){ continents.playAllAnimations(); }
 
     public: // getters/setters
 
@@ -29,9 +34,9 @@ namespace wayfarer { namespace views {
 
     private: // attributes
 
-        ofxAssimpModelLoader model;
+        ofxAssimpModelLoader sphere, continents;
         ofPolyRenderMode renderMode;
-        string modelFileName;
+        string modelFileName, continentsModelFileName;
         ofColor color;
     };
 

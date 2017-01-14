@@ -22,8 +22,10 @@ void GlobeDemo::setup(){
     vector<string> opts = {"globe.obj", "globeGreenAlpha.obj"};
     guiParamMap[gui->addDropdown(modelFileNameParam.getName(), opts)]=&modelFileNameParam;
     GUI_PARAM(gui,colorParam,addColorPicker);
+    animsButton = gui->addButton("play animations");
     gui->expand();
 
+    gui->onButtonEvent(this, &GlobeDemo::onGuiButton);
     gui->onToggleEvent(this, &GlobeDemo::onGuiToggle);
     gui->onTextInputEvent(this, &GlobeDemo::onGuiText);
     gui->onDropdownEvent(this, &GlobeDemo::onGuiDropdown);
@@ -33,13 +35,21 @@ void GlobeDemo::setup(){
     renderModeToggleParam.addListener(this, &GlobeDemo::onRenderModeToggleChange);
     modelFileNameParam.addListener(this, &GlobeDemo::onModelFileNameChange);
     colorParam.addListener(this, &GlobeDemo::onColorChange);
+
+    // apply all param values
+    
+    bool bTmp = renderModeToggleParam.get();
+    ofLog() << "loaded render mode value: " << (bTmp ? "wireframe" : "faces");
+    onRenderModeToggleChange(bTmp);
+    ofColor clrTmp = colorParam.get();
+    onColorChange(clrTmp);
 }
 
 void GlobeDemo::destroy(){
     renderModeToggleParam.removeListener(this, &GlobeDemo::onRenderModeToggleChange);
     modelFileNameParam.removeListener(this, &GlobeDemo::onModelFileNameChange);
     colorParam.removeListener(this, &GlobeDemo::onColorChange);
-    
+
     if(gui){
         delete gui;
         gui = NULL;
@@ -47,10 +57,13 @@ void GlobeDemo::destroy(){
 }
 
 void GlobeDemo::update(){
+    globe.update();
     gui->update();
 }
 
 void GlobeDemo::draw(){
+    ofClear(0);
+
     cam.begin();
     globe.draw();
     cam.end();
@@ -96,5 +109,11 @@ void GlobeDemo::onGuiColorPicker(ofxDatGuiColorPickerEvent event){
     std::map<void*,ofAbstractParameter*>::iterator it = guiParamMap.find(event.target);
     if(it != guiParamMap.end()){
         ((ofParameter<ofColor>*)it->second)->set(event.target->getColor());
+    }
+}
+
+void GlobeDemo::onGuiButton(ofxDatGuiButtonEvent event){
+    if(event.target == animsButton){
+        globe.playAnims();
     }
 }
