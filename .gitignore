@@ -160,3 +160,5 @@ Desktop.ini
 
 .mailmap
 bin/data/log.txt
+*.blend
+*.blend1

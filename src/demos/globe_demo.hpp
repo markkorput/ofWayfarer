@@ -10,7 +10,7 @@ namespace wayfarer { namespace demos {
         SINGLETON_INLINE_HEADER_CODE(GlobeDemo)
 
     public:
-        GlobeDemo() : gui(NULL){}
+        GlobeDemo();
         ~GlobeDemo(){ destroy(); }
         void setup();
         void destroy();

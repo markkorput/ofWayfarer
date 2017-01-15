@@ -1,6 +1,6 @@
 <GlobeDemo>
 	<wireframe>1</wireframe>
 	<model_file>sphere.fbx</model_file>
-	<color>255, 255, 255, 255</color>
+	<color>212, 0, 32, 255</color>
 <GlobeDemo/>
 </GlobeDemo>

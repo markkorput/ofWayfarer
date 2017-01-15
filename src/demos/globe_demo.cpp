@@ -6,15 +6,17 @@ SINGLETON_INLINE_IMPLEMENTATION_CODE(GlobeDemo);
 
 #define GUI_PARAM(g,p,method) guiParamMap[g->method(p.getName(), p.get())]=&p
 
-void GlobeDemo::setup(){
-    globe.setup();
-
+GlobeDemo::GlobeDemo() : gui(NULL){
     // params
     parameters.setName("GlobeDemo");
     // parameters.add(renderMode.set("renderMode", globe.getRenderMode()));
     parameters.add(renderModeToggleParam.set("wireframe", globe.getRenderMode() == OF_MESH_WIREFRAME));
     parameters.add(modelFileNameParam.set("model file", globe.getModelFileName()));
     parameters.add(colorParam.set("color", globe.getColor()));
+}
+
+void GlobeDemo::setup(){
+    globe.setup();
 
     // gui
     gui = new ofxDatGui(ofxDatGuiAnchor::TOP_LEFT);
