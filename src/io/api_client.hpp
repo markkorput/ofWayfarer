@@ -3,17 +3,22 @@
 #include "ofMain.h"
 #include <singleton_macros.h>
 #include "ofxHttpUtils.h"
+#include "ofxJSON.h"
 
 namespace wayfarer { namespace io {
 
-    struct ApiGeoData {
+    class ApiGeoData {
+    public:
         float latitude, longitude;
+        bool parseJson(ofxJSONElement json);
     };
 
-    struct ApiPage {
+    class ApiPage {
+    public:
         string url;
         ApiGeoData geoData;
         vector<string> hrefs;
+        bool parseJson(ofxJSONElement json);
     };
     
     class ApiSession {
@@ -21,8 +26,10 @@ namespace wayfarer { namespace io {
         string url;
         vector<ApiPage> pages;
         bool parseJson(string jsonText);
+        bool parseJson(ofxJSONElement json);
     };
-    
+
+
     class ApiRoutes {
     public:
         ApiRoutes() : rootUrl(""){}
@@ -40,6 +47,7 @@ namespace wayfarer { namespace io {
         string rootUrl;
         
     };
+
 
     class ApiClient {
 
