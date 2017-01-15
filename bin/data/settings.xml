@@ -5,6 +5,7 @@
     	<color>212, 0, 32, 255</color>
     </GlobeDemo>
 	<ApiClient>
-		<rootUrl>http://localhost:8080/</rootUrl>
+		<rootUrl>http://localhost:8080</rootUrl>
 	</ApiClient>
+<ofWayfarer/>
 </ofWayfarer>

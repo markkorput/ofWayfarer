@@ -20,9 +20,11 @@ void ofApp::setup(){
     {   // load params
         ofxPanel gui;
         gui.setup(params);
-        gui.loadFromFile("settings.xml");
-        demos::GlobeDemo::singleton()->setup();
+        gui.loadFromFile("settings.xml");        
     }
+    
+    io::ApiClient::singleton()->setup();
+    demos::GlobeDemo::singleton()->setup();
 
     ofSetFrameRate(60);
     dt = 1.0f / ofGetFrameRate();

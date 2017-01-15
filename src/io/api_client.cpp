@@ -10,6 +10,8 @@ bool ApiGeoData::parseJson(ofxJSONElement json){
 
     if(!json["longitude"].isNull())
         this->longitude = json["longitude"].asFloat();
+    
+    return true;
 }
 
 bool ApiPage::parseJson(ofxJSONElement json){
@@ -28,7 +30,7 @@ bool ApiPage::parseJson(ofxJSONElement json){
     }
 
     if(!json["geo_data"].isNull()){
-        this->geoData.parseJson(json["geo_data"]);
+        return this->geoData.parseJson(json["geo_data"]);
     }
 
     return true;
@@ -74,12 +76,13 @@ bool ApiSession::parseJson(string jsonText){
 
 ApiClient::ApiClient(){
     parameters.setName("ApiClient");
-    parameters.add(rootUrlParam.set("rootUrl", "http://localhost:8080/"));
+    parameters.add(rootUrlParam.set("rootUrl", "http://localhost:8080"));
 }
 
 void ApiClient::setup(string rootUrl){
     routes.setup(rootUrl == "" ? rootUrlParam.get() : rootUrl);
-    
+    ofLog() << "routes configured with rootUrl: " << routes.getRootUrl();
+
     // callbacks
     ofAddListener(httpUtils.newResponseEvent, this, &ApiClient::onNewResponse);
 
@@ -96,10 +99,13 @@ void ApiClient::update(){
 }
 
 void ApiClient::fetchSession(){
+    ofLog() << "fetchSession: " << routes.randomSession();
     httpUtils.addUrl(routes.randomSession());
 }
 
 void ApiClient::onNewResponse(ofxHttpResponse & response){
+    ofLog() << "onNewResponse: " << response.status;
+
     if(response.url == routes.randomSession()){
         if(response.status != 200){
             ofLogWarning() << "Got non " << response.status << " response for fetching random session: " << response.responseBody;

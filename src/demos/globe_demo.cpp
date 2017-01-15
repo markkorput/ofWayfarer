@@ -129,7 +129,7 @@ void GlobeDemo::onGuiButton(ofxDatGuiButtonEvent event){
     }
     
     if(event.target == fetchSessionButton){
-        
+        io::ApiClient::singleton()->fetchSession();
     }
 }
 

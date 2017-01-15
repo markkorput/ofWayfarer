@@ -23,6 +23,7 @@ namespace wayfarer { namespace controllers {
         
         void rotateToLatitudeLongitude(const ofVec2f latLong);
         void playSession(shared_ptr<io::ApiSession> session);
+        void startSessionPage(int idx);
 
     public: // getters / setters
         
@@ -34,8 +35,10 @@ namespace wayfarer { namespace controllers {
         views::Globe *globe;
         views::Globe defaultGlobe;
 
-        ofxAnimatableOfPoint latlonAnim;
+        ofxAnimatableOfPoint latlonAnim,
+                            pageAnim;
         shared_ptr<io::ApiSession> currentSession;
+        int currentSessionPageIndex;
     };
 
 } }

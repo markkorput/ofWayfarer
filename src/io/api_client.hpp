@@ -34,7 +34,7 @@ namespace wayfarer { namespace io {
     public:
         ApiRoutes() : rootUrl(""){}
         void setup(string _rootUrl){ rootUrl = _rootUrl; }
-
+        string getRootUrl(){ return rootUrl; }
         string url(string sub){
             return rootUrl + sub;
         }
