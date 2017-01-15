@@ -27,6 +27,16 @@
 		4D17B6FA1E2ADEC600B1D883 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D17B6F11E2ADEC600B1D883 /* ofxToggle.cpp */; };
 		4DCD170D1E293CC10090591E /* ofTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD170C1E293CC10090591E /* ofTestApp.cpp */; };
 		4DCD17101E293E350090591E /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD170E1E293E350090591E /* ofApp.cpp */; };
+		4DDB33D71E2B78D700B5271A /* globe_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33D51E2B78D700B5271A /* globe_controller.cpp */; };
+		4DDB33FB1E2B7A5B00B5271A /* ofxAnimatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EA1E2B7A5B00B5271A /* ofxAnimatable.cpp */; };
+		4DDB33FC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp */; };
+		4DDB33FD1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */; };
+		4DDB33FE1E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */; };
+		4DDB33FF1E2B7A5B00B5271A /* ofxAnimatableQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */; };
+		4DDB34061E2B8AAC00B5271A /* api_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB34041E2B8AAC00B5271A /* api_client.cpp */; };
+		4DDB341B1E2B91CE00B5271A /* ofxHttpUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB34171E2B91CE00B5271A /* ofxHttpUtils.cpp */; };
+		4DDB345D1E2B977C00B5271A /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB344A1E2B977C00B5271A /* jsoncpp.cpp */; };
+		4DDB34601E2B977C00B5271A /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB344F1E2B977C00B5271A /* ofxJSONElement.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -110,6 +120,29 @@
 		4DCD170C1E293CC10090591E /* ofTestApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofTestApp.cpp; path = test/ofTestApp.cpp; sourceTree = "<group>"; };
 		4DCD170E1E293E350090591E /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		4DCD170F1E293E350090591E /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
+		4DDB33D51E2B78D700B5271A /* globe_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = globe_controller.cpp; path = controllers/globe_controller.cpp; sourceTree = "<group>"; };
+		4DDB33D61E2B78D700B5271A /* globe_controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = globe_controller.hpp; path = controllers/globe_controller.hpp; sourceTree = "<group>"; };
+		4DDB33EA1E2B7A5B00B5271A /* ofxAnimatable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatable.cpp; sourceTree = "<group>"; };
+		4DDB33EB1E2B7A5B00B5271A /* ofxAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatable.h; sourceTree = "<group>"; };
+		4DDB33EC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableFloat.cpp; sourceTree = "<group>"; };
+		4DDB33ED1E2B7A5B00B5271A /* ofxAnimatableFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableFloat.h; sourceTree = "<group>"; };
+		4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableOfColor.cpp; sourceTree = "<group>"; };
+		4DDB33EF1E2B7A5B00B5271A /* ofxAnimatableOfColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfColor.h; sourceTree = "<group>"; };
+		4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableOfPoint.cpp; sourceTree = "<group>"; };
+		4DDB33F11E2B7A5B00B5271A /* ofxAnimatableOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfPoint.h; sourceTree = "<group>"; };
+		4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableQueue.cpp; sourceTree = "<group>"; };
+		4DDB33F31E2B7A5B00B5271A /* ofxAnimatableQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableQueue.h; sourceTree = "<group>"; };
+		4DDB34041E2B8AAC00B5271A /* api_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = api_client.cpp; path = io/api_client.cpp; sourceTree = "<group>"; };
+		4DDB34051E2B8AAC00B5271A /* api_client.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = api_client.hpp; path = io/api_client.hpp; sourceTree = "<group>"; };
+		4DDB34161E2B91CE00B5271A /* ofxHttpTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxHttpTypes.h; sourceTree = "<group>"; };
+		4DDB34171E2B91CE00B5271A /* ofxHttpUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxHttpUtils.cpp; sourceTree = "<group>"; };
+		4DDB34181E2B91CE00B5271A /* ofxHttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxHttpUtils.h; sourceTree = "<group>"; };
+		4DDB34471E2B977C00B5271A /* json-forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "json-forwards.h"; sourceTree = "<group>"; };
+		4DDB34481E2B977C00B5271A /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		4DDB344A1E2B977C00B5271A /* jsoncpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsoncpp.cpp; sourceTree = "<group>"; };
+		4DDB344E1E2B977C00B5271A /* ofxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJSON.h; sourceTree = "<group>"; };
+		4DDB344F1E2B977C00B5271A /* ofxJSONElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJSONElement.cpp; sourceTree = "<group>"; };
+		4DDB34501E2B977C00B5271A /* ofxJSONElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJSONElement.h; sourceTree = "<group>"; };
 		4DF7D19D1E295B9D00A613C0 /* ofTestApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofTestApp.h; path = test/ofTestApp.h; sourceTree = "<group>"; };
 		4DF7D1A01E295E5800A613C0 /* singleton_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleton_macros.h; sourceTree = "<group>"; };
 		4DF7D1E41E2964CD00A613C0 /* assimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = assimp.a; sourceTree = "<group>"; };
@@ -334,6 +367,131 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		4DDB33D41E2B78BF00B5271A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB33D51E2B78D700B5271A /* globe_controller.cpp */,
+				4DDB33D61E2B78D700B5271A /* globe_controller.hpp */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		4DDB33D81E2B7A5B00B5271A /* ofxAnimatable */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB33E91E2B7A5B00B5271A /* src */,
+			);
+			name = ofxAnimatable;
+			path = ../../../addons/ofxAnimatable;
+			sourceTree = "<group>";
+		};
+		4DDB33E91E2B7A5B00B5271A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB33EA1E2B7A5B00B5271A /* ofxAnimatable.cpp */,
+				4DDB33EB1E2B7A5B00B5271A /* ofxAnimatable.h */,
+				4DDB33EC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp */,
+				4DDB33ED1E2B7A5B00B5271A /* ofxAnimatableFloat.h */,
+				4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */,
+				4DDB33EF1E2B7A5B00B5271A /* ofxAnimatableOfColor.h */,
+				4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */,
+				4DDB33F11E2B7A5B00B5271A /* ofxAnimatableOfPoint.h */,
+				4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */,
+				4DDB33F31E2B7A5B00B5271A /* ofxAnimatableQueue.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4DDB34031E2B8A9E00B5271A /* io */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34041E2B8AAC00B5271A /* api_client.cpp */,
+				4DDB34051E2B8AAC00B5271A /* api_client.hpp */,
+			);
+			name = io;
+			sourceTree = "<group>";
+		};
+		4DDB34071E2B91CE00B5271A /* ofxHttpUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34151E2B91CE00B5271A /* src */,
+			);
+			name = ofxHttpUtils;
+			path = ../../../addons/ofxHttpUtils;
+			sourceTree = "<group>";
+		};
+		4DDB34151E2B91CE00B5271A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34161E2B91CE00B5271A /* ofxHttpTypes.h */,
+				4DDB34171E2B91CE00B5271A /* ofxHttpUtils.cpp */,
+				4DDB34181E2B91CE00B5271A /* ofxHttpUtils.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4DDB341C1E2B977C00B5271A /* ofxJSON */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34431E2B977C00B5271A /* libs */,
+				4DDB344D1E2B977C00B5271A /* src */,
+			);
+			name = ofxJSON;
+			path = ../../../addons/ofxJSON;
+			sourceTree = "<group>";
+		};
+		4DDB34431E2B977C00B5271A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34441E2B977C00B5271A /* jsoncpp */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		4DDB34441E2B977C00B5271A /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34451E2B977C00B5271A /* include */,
+				4DDB34491E2B977C00B5271A /* src */,
+			);
+			path = jsoncpp;
+			sourceTree = "<group>";
+		};
+		4DDB34451E2B977C00B5271A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34461E2B977C00B5271A /* json */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		4DDB34461E2B977C00B5271A /* json */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34471E2B977C00B5271A /* json-forwards.h */,
+				4DDB34481E2B977C00B5271A /* json.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		4DDB34491E2B977C00B5271A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB344A1E2B977C00B5271A /* jsoncpp.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4DDB344D1E2B977C00B5271A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB344E1E2B977C00B5271A /* ofxJSON.h */,
+				4DDB344F1E2B977C00B5271A /* ofxJSONElement.cpp */,
+				4DDB34501E2B977C00B5271A /* ofxJSONElement.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		4DF7D1A31E29636B00A613C0 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +636,9 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				4DDB341C1E2B977C00B5271A /* ofxJSON */,
+				4DDB34071E2B91CE00B5271A /* ofxHttpUtils */,
+				4DDB33D81E2B7A5B00B5271A /* ofxAnimatable */,
 				4D17B6E01E2ADEC600B1D883 /* ofxGui */,
 				4D17B4891E2A73C400B1D883 /* ofxDatGui */,
 				4DF7D1A71E2964CD00A613C0 /* ofxAssimpModelLoader */,
@@ -511,6 +672,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4DDB34031E2B8A9E00B5271A /* io */,
+				4DDB33D41E2B78BF00B5271A /* controllers */,
 				4D17B3721E2A644C00B1D883 /* demos */,
 				4DF7D1A31E29636B00A613C0 /* views */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
@@ -558,7 +721,7 @@
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0820;
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofWayfarer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -619,22 +782,32 @@
 			files = (
 				4D17B6AB1E2A73C600B1D883 /* ofxSmartFont.cpp in Sources */,
 				4D17B36E1E29695F00B1D883 /* ofxAssimpTexture.cpp in Sources */,
+				4DDB33D71E2B78D700B5271A /* globe_controller.cpp in Sources */,
+				4DDB34061E2B8AAC00B5271A /* api_client.cpp in Sources */,
+				4DDB33FE1E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				4DDB33FC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp in Sources */,
 				4D17B6AA1E2A73C600B1D883 /* ofxDatGuiComponent.cpp in Sources */,
+				4DDB345D1E2B977C00B5271A /* jsoncpp.cpp in Sources */,
 				4D17B6F51E2ADEC600B1D883 /* ofxGuiGroup.cpp in Sources */,
 				4D17B36C1E29695F00B1D883 /* ofxAssimpMeshHelper.cpp in Sources */,
 				4DCD17101E293E350090591E /* ofApp.cpp in Sources */,
 				4D17B3711E2A644700B1D883 /* globe_demo.cpp in Sources */,
 				4D17B6F91E2ADEC600B1D883 /* ofxSliderGroup.cpp in Sources */,
+				4DDB341B1E2B91CE00B5271A /* ofxHttpUtils.cpp in Sources */,
 				4DCD170D1E293CC10090591E /* ofTestApp.cpp in Sources */,
 				4D17B6F71E2ADEC600B1D883 /* ofxPanel.cpp in Sources */,
+				4DDB33FB1E2B7A5B00B5271A /* ofxAnimatable.cpp in Sources */,
 				4D17B6F81E2ADEC600B1D883 /* ofxSlider.cpp in Sources */,
 				4D17B3651E29685800B1D883 /* globe.cpp in Sources */,
+				4DDB33FD1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp in Sources */,
 				4D17B6F61E2ADEC600B1D883 /* ofxLabel.cpp in Sources */,
 				4D17B36D1E29695F00B1D883 /* ofxAssimpModelLoader.cpp in Sources */,
 				4D17B6AC1E2A73C600B1D883 /* ofxDatGui.cpp in Sources */,
 				4D17B6F41E2ADEC600B1D883 /* ofxButton.cpp in Sources */,
 				4D17B6FA1E2ADEC600B1D883 /* ofxToggle.cpp in Sources */,
+				4DDB33FF1E2B7A5B00B5271A /* ofxAnimatableQueue.cpp in Sources */,
+				4DDB34601E2B977C00B5271A /* ofxJSONElement.cpp in Sources */,
 				4D17B6F31E2ADEC600B1D883 /* ofxBaseGui.cpp in Sources */,
 				4D17B36B1E29695F00B1D883 /* ofxAssimpAnimation.cpp in Sources */,
 			);
@@ -655,19 +828,36 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -689,20 +879,36 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -738,6 +944,7 @@
 					src,
 					test,
 					"$(OF_ADDONS_FOLDER)/ofxAssimpModelLoader/libs/assimp/include",
+					"$(OF_ADDONS_FOLDER)/ofxJSON/libs/jsoncpp/include",
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -746,6 +953,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OF_ADDONS_FOLDER = "$(OF_PATH)/addons";
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.ofapp;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
 			};
@@ -769,6 +977,7 @@
 					src,
 					test,
 					"$(OF_ADDONS_FOLDER)/ofxAssimpModelLoader/libs/assimp/include",
+					"$(OF_ADDONS_FOLDER)/ofxJSON/libs/jsoncpp/include",
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -776,6 +985,7 @@
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OF_ADDONS_FOLDER = "$(OF_PATH)/addons";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.ofapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;

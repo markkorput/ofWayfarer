@@ -1,6 +1,7 @@
 #include "ofApp.h"
 
 #include "demos/globe_demo.hpp"
+#include "io/api_client.hpp"
 #include "ofxGui.h"
 
 using namespace wayfarer;
@@ -10,17 +11,28 @@ void ofApp::setup(){
     ofLog() << "Redirect logging to log.txt";
     ofLogToFile("log.txt", true);
 
+    {   // setup params
+        params.setName("ofWayfarer");
+        params.add(demos::GlobeDemo::singleton()->parameters);
+        params.add(io::ApiClient::singleton()->parameters);
+    }
+
     {   // load params
         ofxPanel gui;
-        gui.setup(demos::GlobeDemo::singleton()->parameters);
-        gui.loadFromFile("settings.xml");
-        demos::GlobeDemo::singleton()->setup();
+        gui.setup(params);
+        gui.loadFromFile("settings.xml");        
     }
+    
+    io::ApiClient::singleton()->setup();
+    demos::GlobeDemo::singleton()->setup();
+
+    ofSetFrameRate(60);
+    dt = 1.0f / ofGetFrameRate();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    demos::GlobeDemo::singleton()->update();
+    demos::GlobeDemo::singleton()->update(dt);
 }
 
 //--------------------------------------------------------------
@@ -33,7 +45,7 @@ void ofApp::exit(ofEventArgs &args){
 
     {   // save params
         ofxPanel gui;
-        gui.setup(demos::GlobeDemo::singleton()->parameters);
+        gui.setup(params);
         gui.saveToFile("settings.xml");
     }
 

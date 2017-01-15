@@ -17,7 +17,9 @@ GlobeDemo::GlobeDemo() : gui(NULL){
 
 void GlobeDemo::setup(){
     globe.setup();
-
+    controller.setGlobe(&globe);
+    controller.setup();
+    
     // gui
     gui = new ofxDatGui(ofxDatGuiAnchor::TOP_LEFT);
     GUI_PARAM(gui,renderModeToggleParam,addToggle);
@@ -25,6 +27,8 @@ void GlobeDemo::setup(){
     guiParamMap[gui->addDropdown(modelFileNameParam.getName(), opts)]=&modelFileNameParam;
     GUI_PARAM(gui,colorParam,addColorPicker);
     animsButton = gui->addButton("play animations");
+    randomLatLonButton = gui->addButton("random lat/lon");
+    fetchSessionButton = gui->addButton("random session");
     gui->expand();
 
     gui->onButtonEvent(this, &GlobeDemo::onGuiButton);
@@ -37,9 +41,9 @@ void GlobeDemo::setup(){
     renderModeToggleParam.addListener(this, &GlobeDemo::onRenderModeToggleChange);
     modelFileNameParam.addListener(this, &GlobeDemo::onModelFileNameChange);
     colorParam.addListener(this, &GlobeDemo::onColorChange);
+    ofAddListener(io::ApiClient::singleton()->sessionFetchedEvent, this, &GlobeDemo::onSessionFetched);
 
     // apply all param values
-    
     bool bTmp = renderModeToggleParam.get();
     ofLog() << "loaded render mode value: " << (bTmp ? "wireframe" : "faces");
     onRenderModeToggleChange(bTmp);
@@ -51,6 +55,7 @@ void GlobeDemo::destroy(){
     renderModeToggleParam.removeListener(this, &GlobeDemo::onRenderModeToggleChange);
     modelFileNameParam.removeListener(this, &GlobeDemo::onModelFileNameChange);
     colorParam.removeListener(this, &GlobeDemo::onColorChange);
+    ofRemoveListener(io::ApiClient::singleton()->sessionFetchedEvent, this, &GlobeDemo::onSessionFetched);
 
     if(gui){
         delete gui;
@@ -58,8 +63,8 @@ void GlobeDemo::destroy(){
     }
 }
 
-void GlobeDemo::update(){
-    globe.update();
+void GlobeDemo::update(float dt){
+    controller.update(dt);
     gui->update();
 }
 
@@ -118,4 +123,16 @@ void GlobeDemo::onGuiButton(ofxDatGuiButtonEvent event){
     if(event.target == animsButton){
         globe.playAnims();
     }
+    
+    if(event.target == randomLatLonButton){
+        controller.rotateToLatitudeLongitude(ofVec2f(ofRandom(-90.0f, 90.0f), ofRandom(-180.0f, 180.0f)));
+    }
+    
+    if(event.target == fetchSessionButton){
+        io::ApiClient::singleton()->fetchSession();
+    }
+}
+
+void GlobeDemo::onSessionFetched(shared_ptr<io::ApiSession> &session){
+    controller.playSession(session);
 }

@@ -1,3 +1,7 @@
 ofxUnitTests
 ofxAssimpModelLoader
 ofxGui
+ofxDatGui
+ofxAnimatable
+ofxHttpUtils
+ofxJSON

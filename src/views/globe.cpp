@@ -31,3 +31,11 @@ void Globe::draw(){
     continents.draw(renderMode);
     ofPopMatrix();
 }
+
+void Globe::setLatitudeLongitude(const ofVec2f &latlon){
+    this->latlon2f = latlon;
+    // setRotation(int which, float angle, float rot_x, float rot_y, float rot_z)
+    continents.setRotation(0, latlon.x, 1.0f, 0.0f, 0.0f); // latitude; rotation around x-axis
+    continents.setRotation(1, latlon.y, 0.0f, 1.0f, 0.0f); // longitude; rotation around y-axis
+    
+}
