@@ -33,6 +33,7 @@
 		4DDB33FD1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */; };
 		4DDB33FE1E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */; };
 		4DDB33FF1E2B7A5B00B5271A /* ofxAnimatableQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */; };
+		4DDB34061E2B8AAC00B5271A /* api_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB34041E2B8AAC00B5271A /* api_client.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,8 @@
 		4DDB33F11E2B7A5B00B5271A /* ofxAnimatableOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfPoint.h; sourceTree = "<group>"; };
 		4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableQueue.cpp; sourceTree = "<group>"; };
 		4DDB33F31E2B7A5B00B5271A /* ofxAnimatableQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableQueue.h; sourceTree = "<group>"; };
+		4DDB34041E2B8AAC00B5271A /* api_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = api_client.cpp; path = io/api_client.cpp; sourceTree = "<group>"; };
+		4DDB34051E2B8AAC00B5271A /* api_client.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = api_client.hpp; path = io/api_client.hpp; sourceTree = "<group>"; };
 		4DF7D19D1E295B9D00A613C0 /* ofTestApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofTestApp.h; path = test/ofTestApp.h; sourceTree = "<group>"; };
 		4DF7D1A01E295E5800A613C0 /* singleton_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleton_macros.h; sourceTree = "<group>"; };
 		4DF7D1E41E2964CD00A613C0 /* assimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = assimp.a; sourceTree = "<group>"; };
@@ -387,6 +390,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		4DDB34031E2B8A9E00B5271A /* io */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB34041E2B8AAC00B5271A /* api_client.cpp */,
+				4DDB34051E2B8AAC00B5271A /* api_client.hpp */,
+			);
+			name = io;
+			sourceTree = "<group>";
+		};
 		4DF7D1A31E29636B00A613C0 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +577,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4DDB34031E2B8A9E00B5271A /* io */,
 				4DDB33D41E2B78BF00B5271A /* controllers */,
 				4D17B3721E2A644C00B1D883 /* demos */,
 				4DF7D1A31E29636B00A613C0 /* views */,
@@ -675,6 +688,7 @@
 				4D17B6AB1E2A73C600B1D883 /* ofxSmartFont.cpp in Sources */,
 				4D17B36E1E29695F00B1D883 /* ofxAssimpTexture.cpp in Sources */,
 				4DDB33D71E2B78D700B5271A /* globe_controller.cpp in Sources */,
+				4DDB34061E2B8AAC00B5271A /* api_client.cpp in Sources */,
 				4DDB33FE1E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				4DDB33FC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp in Sources */,

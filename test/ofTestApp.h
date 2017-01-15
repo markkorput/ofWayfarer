@@ -2,8 +2,14 @@
 
 #include "ofMain.h"
 #include "ofxUnitTests.h"
+#include <io/api_client.hpp>
 
-// ofAppNoWindow.h --> ofAppNoWindow
 class ofTestApp : public ofxUnitTestsApp{
+public:
     void run();
+
+private:
+    wayfarer::io::ApiClient client;
+    void testApiClient();
+    void onSessionFetched(wayfarer::io::ApiSession &session);
 };
