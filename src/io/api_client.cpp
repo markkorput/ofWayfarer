@@ -71,6 +71,12 @@ bool ApiSession::parseJson(string jsonText){
     return parseJson(json);
 }
 
+
+ApiClient::ApiClient(){
+    parameters.setName("ApiClient");
+    parameters.add(rootUrlParam.set("rootUrl", "http://localhost:8080/"));
+}
+
 void ApiClient::setup(string rootUrl){
     routes.setup(rootUrl);
     

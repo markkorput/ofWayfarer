@@ -25,5 +25,5 @@ class ofApp : public ofBaseApp{
     private:
     
         float dt; // time between two frames
-
+        ofParameterGroup params;
 };

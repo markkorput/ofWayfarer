@@ -1,6 +1,10 @@
-<GlobeDemo>
-	<wireframe>1</wireframe>
-	<model_file>sphere.fbx</model_file>
-	<color>212, 0, 32, 255</color>
-<GlobeDemo/>
-</GlobeDemo>
+<ofWayfarer>
+    <GlobeDemo>
+    	<wireframe>1</wireframe>
+    	<model_file>sphere.fbx</model_file>
+    	<color>212, 0, 32, 255</color>
+    </GlobeDemo>
+	<ApiClient>
+		<rootUrl>http://localhost:8080/</rootUrl>
+	</ApiClient>
+</ofWayfarer>

@@ -48,14 +48,13 @@ namespace wayfarer { namespace io {
         
     };
 
-
     class ApiClient {
 
         SINGLETON_INLINE_HEADER_CODE(ApiClient);
 
     public:
 
-        // ApiClient();
+         ApiClient();
         ~ApiClient(){ destroy(); }
         void setup(string rootUrl);
         void destroy();
@@ -72,12 +71,16 @@ namespace wayfarer { namespace io {
     public: // events
 
         ofEvent<ApiSession> sessionFetchedEvent;
-        
+
+    public: // params
+
+        ofParameterGroup parameters;
+        ofParameter<string> rootUrlParam;
+
     private: // attributes
-        
+
         ApiRoutes routes;
         ofxHttpUtils httpUtils;
-        
     };
 
 }}
