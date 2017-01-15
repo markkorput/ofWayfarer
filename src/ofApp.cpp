@@ -16,11 +16,14 @@ void ofApp::setup(){
         gui.loadFromFile("settings.xml");
         demos::GlobeDemo::singleton()->setup();
     }
+
+    ofSetFrameRate(60);
+    dt = 1.0f / ofGetFrameRate();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    demos::GlobeDemo::singleton()->update();
+    demos::GlobeDemo::singleton()->update(dt);
 }
 
 //--------------------------------------------------------------

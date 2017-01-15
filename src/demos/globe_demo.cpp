@@ -17,7 +17,9 @@ GlobeDemo::GlobeDemo() : gui(NULL){
 
 void GlobeDemo::setup(){
     globe.setup();
-
+    controller.setGlobe(&globe);
+    controller.setup();
+    
     // gui
     gui = new ofxDatGui(ofxDatGuiAnchor::TOP_LEFT);
     GUI_PARAM(gui,renderModeToggleParam,addToggle);
@@ -25,6 +27,7 @@ void GlobeDemo::setup(){
     guiParamMap[gui->addDropdown(modelFileNameParam.getName(), opts)]=&modelFileNameParam;
     GUI_PARAM(gui,colorParam,addColorPicker);
     animsButton = gui->addButton("play animations");
+    randomLatLonButton = gui->addButton("random lat/lon");
     gui->expand();
 
     gui->onButtonEvent(this, &GlobeDemo::onGuiButton);
@@ -58,8 +61,8 @@ void GlobeDemo::destroy(){
     }
 }
 
-void GlobeDemo::update(){
-    globe.update();
+void GlobeDemo::update(float dt){
+    controller.update(dt);
     gui->update();
 }
 
@@ -117,5 +120,9 @@ void GlobeDemo::onGuiColorPicker(ofxDatGuiColorPickerEvent event){
 void GlobeDemo::onGuiButton(ofxDatGuiButtonEvent event){
     if(event.target == animsButton){
         globe.playAnims();
+    }
+    
+    if(event.target == randomLatLonButton){
+        controller.rotateToLatitudeLongitude(ofVec2f(ofRandom(-90.0f, 90.0f), ofRandom(-180.0f, 180.0f)));
     }
 }

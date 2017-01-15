@@ -3,7 +3,8 @@
 #include "ofxDatGui.h"
 #include <singleton_macros.h>
 #include <views/globe.hpp>
-        
+#include <controllers/globe_controller.hpp>
+
 namespace wayfarer { namespace demos {
    
     class GlobeDemo {
@@ -14,7 +15,7 @@ namespace wayfarer { namespace demos {
         ~GlobeDemo(){ destroy(); }
         void setup();
         void destroy();
-        void update();
+        void update(float dt);
         void draw();
         
     private: // callbacks
@@ -32,6 +33,7 @@ namespace wayfarer { namespace demos {
     private: // attributes
 
         views::Globe globe;
+        controllers::GlobeController controller;
         
     public: // params
 
@@ -44,7 +46,7 @@ namespace wayfarer { namespace demos {
     private: // gui
         
         ofxDatGui *gui;
-        ofxDatGuiButton *animsButton;
+        ofxDatGuiButton *animsButton, *randomLatLonButton;
         ofEasyCam cam;
         std::map<void*,ofAbstractParameter*> guiParamMap;
     };

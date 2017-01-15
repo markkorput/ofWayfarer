@@ -27,6 +27,12 @@
 		4D17B6FA1E2ADEC600B1D883 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D17B6F11E2ADEC600B1D883 /* ofxToggle.cpp */; };
 		4DCD170D1E293CC10090591E /* ofTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD170C1E293CC10090591E /* ofTestApp.cpp */; };
 		4DCD17101E293E350090591E /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD170E1E293E350090591E /* ofApp.cpp */; };
+		4DDB33D71E2B78D700B5271A /* globe_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33D51E2B78D700B5271A /* globe_controller.cpp */; };
+		4DDB33FB1E2B7A5B00B5271A /* ofxAnimatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EA1E2B7A5B00B5271A /* ofxAnimatable.cpp */; };
+		4DDB33FC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp */; };
+		4DDB33FD1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */; };
+		4DDB33FE1E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */; };
+		4DDB33FF1E2B7A5B00B5271A /* ofxAnimatableQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -110,6 +116,18 @@
 		4DCD170C1E293CC10090591E /* ofTestApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofTestApp.cpp; path = test/ofTestApp.cpp; sourceTree = "<group>"; };
 		4DCD170E1E293E350090591E /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		4DCD170F1E293E350090591E /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
+		4DDB33D51E2B78D700B5271A /* globe_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = globe_controller.cpp; path = controllers/globe_controller.cpp; sourceTree = "<group>"; };
+		4DDB33D61E2B78D700B5271A /* globe_controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = globe_controller.hpp; path = controllers/globe_controller.hpp; sourceTree = "<group>"; };
+		4DDB33EA1E2B7A5B00B5271A /* ofxAnimatable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatable.cpp; sourceTree = "<group>"; };
+		4DDB33EB1E2B7A5B00B5271A /* ofxAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatable.h; sourceTree = "<group>"; };
+		4DDB33EC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableFloat.cpp; sourceTree = "<group>"; };
+		4DDB33ED1E2B7A5B00B5271A /* ofxAnimatableFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableFloat.h; sourceTree = "<group>"; };
+		4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableOfColor.cpp; sourceTree = "<group>"; };
+		4DDB33EF1E2B7A5B00B5271A /* ofxAnimatableOfColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfColor.h; sourceTree = "<group>"; };
+		4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableOfPoint.cpp; sourceTree = "<group>"; };
+		4DDB33F11E2B7A5B00B5271A /* ofxAnimatableOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfPoint.h; sourceTree = "<group>"; };
+		4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableQueue.cpp; sourceTree = "<group>"; };
+		4DDB33F31E2B7A5B00B5271A /* ofxAnimatableQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableQueue.h; sourceTree = "<group>"; };
 		4DF7D19D1E295B9D00A613C0 /* ofTestApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofTestApp.h; path = test/ofTestApp.h; sourceTree = "<group>"; };
 		4DF7D1A01E295E5800A613C0 /* singleton_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleton_macros.h; sourceTree = "<group>"; };
 		4DF7D1E41E2964CD00A613C0 /* assimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = assimp.a; sourceTree = "<group>"; };
@@ -334,6 +352,41 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		4DDB33D41E2B78BF00B5271A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB33D51E2B78D700B5271A /* globe_controller.cpp */,
+				4DDB33D61E2B78D700B5271A /* globe_controller.hpp */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		4DDB33D81E2B7A5B00B5271A /* ofxAnimatable */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB33E91E2B7A5B00B5271A /* src */,
+			);
+			name = ofxAnimatable;
+			path = ../../../addons/ofxAnimatable;
+			sourceTree = "<group>";
+		};
+		4DDB33E91E2B7A5B00B5271A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB33EA1E2B7A5B00B5271A /* ofxAnimatable.cpp */,
+				4DDB33EB1E2B7A5B00B5271A /* ofxAnimatable.h */,
+				4DDB33EC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp */,
+				4DDB33ED1E2B7A5B00B5271A /* ofxAnimatableFloat.h */,
+				4DDB33EE1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp */,
+				4DDB33EF1E2B7A5B00B5271A /* ofxAnimatableOfColor.h */,
+				4DDB33F01E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp */,
+				4DDB33F11E2B7A5B00B5271A /* ofxAnimatableOfPoint.h */,
+				4DDB33F21E2B7A5B00B5271A /* ofxAnimatableQueue.cpp */,
+				4DDB33F31E2B7A5B00B5271A /* ofxAnimatableQueue.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		4DF7D1A31E29636B00A613C0 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +531,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				4DDB33D81E2B7A5B00B5271A /* ofxAnimatable */,
 				4D17B6E01E2ADEC600B1D883 /* ofxGui */,
 				4D17B4891E2A73C400B1D883 /* ofxDatGui */,
 				4DF7D1A71E2964CD00A613C0 /* ofxAssimpModelLoader */,
@@ -511,6 +565,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4DDB33D41E2B78BF00B5271A /* controllers */,
 				4D17B3721E2A644C00B1D883 /* demos */,
 				4DF7D1A31E29636B00A613C0 /* views */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
@@ -619,7 +674,10 @@
 			files = (
 				4D17B6AB1E2A73C600B1D883 /* ofxSmartFont.cpp in Sources */,
 				4D17B36E1E29695F00B1D883 /* ofxAssimpTexture.cpp in Sources */,
+				4DDB33D71E2B78D700B5271A /* globe_controller.cpp in Sources */,
+				4DDB33FE1E2B7A5B00B5271A /* ofxAnimatableOfPoint.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				4DDB33FC1E2B7A5B00B5271A /* ofxAnimatableFloat.cpp in Sources */,
 				4D17B6AA1E2A73C600B1D883 /* ofxDatGuiComponent.cpp in Sources */,
 				4D17B6F51E2ADEC600B1D883 /* ofxGuiGroup.cpp in Sources */,
 				4D17B36C1E29695F00B1D883 /* ofxAssimpMeshHelper.cpp in Sources */,
@@ -628,13 +686,16 @@
 				4D17B6F91E2ADEC600B1D883 /* ofxSliderGroup.cpp in Sources */,
 				4DCD170D1E293CC10090591E /* ofTestApp.cpp in Sources */,
 				4D17B6F71E2ADEC600B1D883 /* ofxPanel.cpp in Sources */,
+				4DDB33FB1E2B7A5B00B5271A /* ofxAnimatable.cpp in Sources */,
 				4D17B6F81E2ADEC600B1D883 /* ofxSlider.cpp in Sources */,
 				4D17B3651E29685800B1D883 /* globe.cpp in Sources */,
+				4DDB33FD1E2B7A5B00B5271A /* ofxAnimatableOfColor.cpp in Sources */,
 				4D17B6F61E2ADEC600B1D883 /* ofxLabel.cpp in Sources */,
 				4D17B36D1E29695F00B1D883 /* ofxAssimpModelLoader.cpp in Sources */,
 				4D17B6AC1E2A73C600B1D883 /* ofxDatGui.cpp in Sources */,
 				4D17B6F41E2ADEC600B1D883 /* ofxButton.cpp in Sources */,
 				4D17B6FA1E2ADEC600B1D883 /* ofxToggle.cpp in Sources */,
+				4DDB33FF1E2B7A5B00B5271A /* ofxAnimatableQueue.cpp in Sources */,
 				4D17B6F31E2ADEC600B1D883 /* ofxBaseGui.cpp in Sources */,
 				4D17B36B1E29695F00B1D883 /* ofxAssimpAnimation.cpp in Sources */,
 			);

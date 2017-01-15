@@ -12,14 +12,17 @@ namespace wayfarer { namespace views {
         Globe() : renderMode(OF_MESH_WIREFRAME),
                 modelFileName("sphere.fbx"),
                 continentsModelFileName("continents.fbx"),
-                color(ofColor::white){}
+                color(ofColor::white),
+                latlon2f(ofVec2f::zero()){}
         void setup();
         void update();
         void draw();
     
     public: // operations methods
-        
+
         void playAnims(){ continents.playAllAnimations(); }
+        ofVec2f getLatitudeLongitude(){ return latlon2f; }
+        void setLatitudeLongitude(const ofVec2f &latlon);
 
     public: // getters/setters
 
@@ -38,6 +41,7 @@ namespace wayfarer { namespace views {
         ofPolyRenderMode renderMode;
         string modelFileName, continentsModelFileName;
         ofColor color;
+        ofVec2f latlon2f;
     };
 
 } }
