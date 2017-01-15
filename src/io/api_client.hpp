@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include <singleton_macros.h>
+#include "ofxHttpUtils.h"
 
 namespace wayfarer { namespace io {
 
@@ -15,11 +16,30 @@ namespace wayfarer { namespace io {
         vector<string> hrefs;
     };
     
-    struct ApiSession {
+    class ApiSession {
+    public:
         string url;
         vector<ApiPage> pages;
+        bool parseJson(string jsonText);
     };
     
+    class ApiRoutes {
+    public:
+        ApiRoutes() : rootUrl(""){}
+        void setup(string _rootUrl){ rootUrl = _rootUrl; }
+
+        string url(string sub){
+            return rootUrl + sub;
+        }
+
+        string randomSession(){
+            return url("/session/random");
+        }
+
+    private:
+        string rootUrl;
+        
+    };
 
     class ApiClient {
 
@@ -27,7 +47,7 @@ namespace wayfarer { namespace io {
 
     public:
 
-        ApiClient() : rootUrl(""){}
+        // ApiClient();
         ~ApiClient(){ destroy(); }
         void setup(string rootUrl);
         void destroy();
@@ -37,13 +57,18 @@ namespace wayfarer { namespace io {
 
         void fetchSession();
 
+    private: // callbacks
+        
+        void onNewResponse(ofxHttpResponse & response);
+
     public: // events
 
         ofEvent<ApiSession> sessionFetchedEvent;
         
     private: // attributes
         
-        string rootUrl;
+        ApiRoutes routes;
+        ofxHttpUtils httpUtils;
         
     };
 

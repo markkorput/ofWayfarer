@@ -6,6 +6,7 @@ void ofTestApp::testApiClient(){
     client.setup("http://127.0.0.1:8081/wayfarer/api/v1");
     ofAddListener(client.sessionFetchedEvent, this, &ofTestApp::onSessionFetched);
     client.fetchSession();
+    // test_eq(client.isActive(), true, "client tells if its active"));
     // waitForAsync();
 }
 
@@ -24,9 +25,7 @@ void ofTestApp::onSessionFetched(wayfarer::io::ApiSession &session){
 }
 
 void ofTestApp::run(){
-
     testApiClient();
-
 }
 
 #endif // DEBUG
