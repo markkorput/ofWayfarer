@@ -1,1 +1,3 @@
 ofxUnitTests
+ofxAssimpModelLoader
+ofxGui

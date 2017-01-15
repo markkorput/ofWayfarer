@@ -1,23 +1,23 @@
 #pragma once
 
-#define FCOL_SINGLETON_INLINE_HEADER_CODE(x) \
+#define SINGLETON_INLINE_HEADER_CODE(x) \
     private:\
-        static x* singleton; \
+        static x* _singleton_instance; \
     public: \
         inline static x* singleton(){\
-            if(!singleton){\
+            if(!_singleton_instance){\
                 ofLogVerbose() << "Creating singleton of class " << #x;\
-                singleton = new x();\
+                _singleton_instance = new x();\
             }\
-            return singleton;\
+            return _singleton_instance;\
         }\
         inline static void delete_singleton(){ \
-            if(singleton){\
+            if(_singleton_instance){\
                 ofLogVerbose() << "Deleting singleton of class " << #x;\
-                delete singleton;\
-                singleton = NULL;\
+                delete _singleton_instance;\
+                _singleton_instance = NULL;\
             }\
         }
 
-#define FCOL_SINGLETON_INLINE_IMPLEMENTATION_CODE(x) \
-    x* x::singleton = NULL;
+#define SINGLETON_INLINE_IMPLEMENTATION_CODE(x) \
+    x* x::_singleton_instance = NULL;
