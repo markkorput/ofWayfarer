@@ -3,6 +3,7 @@
 #include "ofxAnimatableOfPoint.h"
 #include <singleton_macros.h>
 #include <views/globe.hpp>
+#include <io/api_client.hpp>
 
 namespace wayfarer { namespace controllers {
    
@@ -21,6 +22,7 @@ namespace wayfarer { namespace controllers {
         void update(float dt);
         
         void rotateToLatitudeLongitude(const ofVec2f latLong);
+        void playSession(shared_ptr<io::ApiSession> session);
 
     public: // getters / setters
         
@@ -33,6 +35,7 @@ namespace wayfarer { namespace controllers {
         views::Globe defaultGlobe;
 
         ofxAnimatableOfPoint latlonAnim;
+        shared_ptr<io::ApiSession> currentSession;
     };
 
 } }

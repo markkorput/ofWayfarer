@@ -26,3 +26,7 @@ void GlobeController::update(float dt){
 void GlobeController::rotateToLatitudeLongitude(const ofVec2f latLong){
     latlonAnim.animateTo(ofPoint(latLong));
 }
+
+void GlobeController::playSession(shared_ptr<io::ApiSession> session){
+    currentSession = session;
+}

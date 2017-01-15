@@ -10,11 +10,11 @@ void ofTestApp::testApiClient(){
     // waitForAsync();
 }
 
-void ofTestApp::onSessionFetched(wayfarer::io::ApiSession &session){
-    test_eq(session.url, "http://...", "");
-    test_eq(session.pages.size(), 5, "");
+void ofTestApp::onSessionFetched(shared_ptr<wayfarer::io::ApiSession> &session){
+    test_eq(session->url, "http://...", "");
+    test_eq(session->pages.size(), 5, "");
     
-    wayfarer::io::ApiPage page = session.pages[0];
+    wayfarer::io::ApiPage page = session->pages[0];
     test_eq(page.url, "http://...", "");
     test_eq(page.geoData.latitude, 29.8f, "");
     test_eq(page.geoData.longitude, -15.6f, "");

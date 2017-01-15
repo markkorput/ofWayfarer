@@ -78,7 +78,7 @@ ApiClient::ApiClient(){
 }
 
 void ApiClient::setup(string rootUrl){
-    routes.setup(rootUrl);
+    routes.setup(rootUrl == "" ? rootUrlParam.get() : rootUrl);
     
     // callbacks
     ofAddListener(httpUtils.newResponseEvent, this, &ApiClient::onNewResponse);
@@ -104,9 +104,10 @@ void ApiClient::onNewResponse(ofxHttpResponse & response){
         if(response.status != 200){
             ofLogWarning() << "Got non " << response.status << " response for fetching random session: " << response.responseBody;
         }
-        ApiSession apiSession;
-        if(apiSession.parseJson(response.responseBody)){
-            ofNotifyEvent(sessionFetchedEvent, apiSession);
+
+        auto session = std::make_shared<ApiSession>();
+        if(session->parseJson(response.responseBody)){
+            ofNotifyEvent(sessionFetchedEvent, session);
         }
     }
     

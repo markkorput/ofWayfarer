@@ -56,7 +56,7 @@ namespace wayfarer { namespace io {
 
          ApiClient();
         ~ApiClient(){ destroy(); }
-        void setup(string rootUrl);
+        void setup(string rootUrl="");
         void destroy();
         void update();
 
@@ -70,7 +70,7 @@ namespace wayfarer { namespace io {
 
     public: // events
 
-        ofEvent<ApiSession> sessionFetchedEvent;
+        ofEvent<shared_ptr<ApiSession>> sessionFetchedEvent;
 
     public: // params
 

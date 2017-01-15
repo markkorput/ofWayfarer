@@ -11,5 +11,5 @@ public:
 private:
     wayfarer::io::ApiClient client;
     void testApiClient();
-    void onSessionFetched(wayfarer::io::ApiSession &session);
+    void onSessionFetched(shared_ptr<wayfarer::io::ApiSession> &session);
 };

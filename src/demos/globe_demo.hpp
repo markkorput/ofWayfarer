@@ -4,6 +4,7 @@
 #include <singleton_macros.h>
 #include <views/globe.hpp>
 #include <controllers/globe_controller.hpp>
+#include <io/api_client.hpp>
 
 namespace wayfarer { namespace demos {
    
@@ -29,6 +30,8 @@ namespace wayfarer { namespace demos {
         void onRenderModeToggleChange(bool &wireframe);
         void onModelFileNameChange(string &fileName);
         void onColorChange(ofColor &color);
+        
+        void onSessionFetched(shared_ptr<io::ApiSession> &session);
 
     private: // attributes
 
@@ -46,7 +49,9 @@ namespace wayfarer { namespace demos {
     private: // gui
         
         ofxDatGui *gui;
-        ofxDatGuiButton *animsButton, *randomLatLonButton;
+        ofxDatGuiButton *animsButton,
+                        *randomLatLonButton,
+                        *fetchSessionButton;
         ofEasyCam cam;
         std::map<void*,ofAbstractParameter*> guiParamMap;
     };
